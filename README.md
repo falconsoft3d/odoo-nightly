@@ -40,3 +40,8 @@ logrotate = True
 ```linux
 aservice odoo restart
 ```
+
+# Activamos el modo de desarrollador
+```linux
+http://odoo11.myotherlive.com/web?debug=1
+```
