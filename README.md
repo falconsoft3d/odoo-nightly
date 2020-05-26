@@ -1,3 +1,9 @@
+# Creamos una cuenta en https://cloud.digitalocean.com/
+
+```linux
+https://m.do.co/c/7f5c3af8d6bb
+```
+
 # Instalando Odoo 11
 
 ```linux
