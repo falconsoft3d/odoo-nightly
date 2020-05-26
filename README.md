@@ -15,7 +15,28 @@ nano /etc/odoo/odoo.conf
 /usr/lib/python3/dist-packages/odoo/addons
 ```
 # Instalando nuevas apps
+
+# Creamos una carpeta para subir los addons
 ```linux
 mkdir /etc/extra-addons
 chown odoo: /etc/extra-addons -R
+```
+# Descargamos y Subimos al servidor el addons con rsync
+```linux
+rsync --info=progress2 rowno_in_tree.zip  root@192.81.217.46:/etc/extra-addons/rowno_in_tree.zip
+cd /etc/extra-addons/
+apt-get install unzip
+unzip rowno_in_tree.zip
+rm rowno_in_tree.zip
+```
+
+# Abrimos el Archivo de configuracion
+```linux
+addons_path = /usr/lib/python3/dist-packages/odoo/addons,/etc/extra-addons
+logrotate = True
+```
+
+# Reiniciamos Odoo
+```linux
+aservice odoo restart
 ```
