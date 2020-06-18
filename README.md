@@ -61,7 +61,7 @@ logrotate = True
 
 # Reiniciamos Odoo
 ```linux
-aservice odoo restart
+service odoo restart
 ```
 
 # Activamos el modo de desarrollador
