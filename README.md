@@ -68,3 +68,8 @@ service odoo restart
 ```linux
 http://odoo11.myotherlive.com/web?debug=1
 ```
+
+# Log
+```linux
+tail -f /var/log/odoo/odoo-server.log
+```
